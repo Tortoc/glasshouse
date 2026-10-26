@@ -2052,5 +2052,12 @@
  "tv.options.sleep.toNext": {"text": "Pulsa OK para {time}", "from": "Press OK for {time}"},
  "tv.options.sleep.toOff": {"text": "Pulsa OK para apagarla", "from": "Press OK to turn it off"},
  "lang.partial": {"text": "{name} (parcial)", "from": "{name} (partial)"},
- "srv.remoteKeys.home": {"text": "Inicio", "from": "Home"}
+ "srv.remoteKeys.home": {"text": "Inicio", "from": "Home"},
+ "home.folder.title": {"text": "Más apps", "from": "More apps"},
+ "home.folder.label": {"text": "En Más apps", "from": "In More apps"},
+ "home.arrange.folder": {"text": "Meter en Más apps o sacar", "from": "Into or out of More apps"},
+ "home.arrange.folderAppsOnly": {"text": "Solo las apps van a Más apps", "from": "Only apps go into More apps"},
+ "home.arrange.isInFolder": {"text": "{name} (en Más apps)", "from": "{name} (in More apps)"},
+ "home.row.appsNoteFolder": {"text": "{n} de {total} visibles, {folder} en Más apps", "from": "{n} of {total} shown, {folder} in More apps"},
+ "home.place": {"text": "Dónde aparece", "from": "Where it shows"}
 }
