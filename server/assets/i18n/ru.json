@@ -2137,5 +2137,12 @@
  "tv.home.searchBlockedList": {"text": "Список hosts блокировщика рекламы блокирует {host}, который нужен поиску LG. Чтобы пользоваться поиском, уберите его из списка на вкладке «Приватность» веб-панели.", "from": "The ad blocker’s hosts list blocks {host}, which LG’s search needs. Take it out of the list on the web dashboard’s Privacy tab to use search."},
  "tv.privacy.everything.search": {"text": "Там, где он блокирует поиск LG, поиск Glasshouse Home скрыт.", "from": "Where it blocks LG’s search, Glasshouse Home’s search is hidden."},
  "tv.saver.powerOff.hint": {"text": "Переводит телевизор в режим ожидания, когда заставка идёт столько времени. Любое число минут можно задать в Glasshouse из браузера.", "from": "Puts the TV in standby once a screen saver has been on this long. Any number of minutes can be set from Glasshouse in a browser."},
- "tv.saver.powerOff.minutes": {"text": "{n} мин", "from": "{n} min"}
+ "tv.saver.powerOff.minutes": {"text": "{n} мин", "from": "{n} min"},
+ "home.arrange.folder": {"text": "В «Другие приложения» или обратно", "from": "Into or out of More apps"},
+ "home.arrange.folderAppsOnly": {"text": "В «Другие приложения» можно поместить только приложения", "from": "Only apps go into More apps"},
+ "home.arrange.isInFolder": {"text": "{name} (в «Других приложениях»)", "from": "{name} (in More apps)"},
+ "home.folder.label": {"text": "В «Других приложениях»", "from": "In More apps"},
+ "home.folder.title": {"text": "Другие приложения", "from": "More apps"},
+ "home.place": {"text": "Где показывается", "from": "Where it shows"},
+ "home.row.appsNoteFolder": {"text": "Показано: {n} из {total}, {folder} в «Других приложениях»", "from": "{n} of {total} shown, {folder} in More apps"}
 }
