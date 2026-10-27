@@ -1224,6 +1224,16 @@ The webOS 9 entries above describe the home app's CRIU checkpoint. On a CX:
 - The TV has no `/etc/issue`. `/etc/starfish-release` has
   `Rockhopper release 10.3.1-3006`, and `/etc/os-release` `VERSION_ID=10.3.1`.
 
+## The first Home press after a reboot (CX, webOS 5.6.2)
+
+Reported on 26 October 2026 from an OLED55CXPUA (firmware 4.64.00), with
+Glasshouse Home on behind `allowExperimentalHome`.
+
+- **The view took up to 13 s to answer** the first Home press after a reboot,
+  with WebAppMgr running: its page was loading from cold. A 5 s wait for its
+  first heartbeat gave LG's Home the place every time, so Glasshouse Home
+  never opened. With the wait at 20 s it opened.
+
 ## WebAppMgr stopped (G4, webOS 11.2.0)
 
 Seen on 23 October 2026 on an OLED65G4KNA with Glasshouse Home switched on.
@@ -1630,3 +1640,26 @@ item with `position: absolute` children and no in-flow height collapses to 0 px.
 CSS transitions and transforms similarly require `-webkit-transition`,
 `-webkit-transform`, and `element.style.webkitTransform` in script (#746).
 
+On webOS 4 (Chromium 53, a B8 and a C9) the reverse holds: `height: 100%` on a
+flex item inside a flexed parent counts as no height, so the TV app's row list
+collapsed to 0 px and showed nothing in 0.121.0 and 0.122.0. The height is set
+back to `auto` inside `@supports (display: flex)`, which WebKit 538.2 does not
+read.
+
+On the B8 the TV app's page, kept in memory, went on showing the old layout
+after the server was updated, until the TV restarted: it came back without the
+`webOSRelaunch` event that reloads it. The page now also reloads when
+`/api/caps` reports a server version other than the one it loaded with.
+
+
+## Installing Glasshouse's own package (G3, webOS 9.2.2)
+
+- `appInstallService/dev/install` with `ipkUrl` set to a local `.ipk` of
+  `io.github.rorygallagher2024.lg-webos-dashboard` replaced the app in about
+  1.5 s, with the server, run from `/var/lib/tvweb`, left running. The package
+  has no services, so nothing lost root.
+- The app was open at the time and the install closed it; the TV went back to
+  Home.
+- Network-input key codes (`networkinput/test/sendKeyCode`) did not reach the
+  Glasshouse app's page; key events written to the remote's input device
+  (`LGE RCU`) did.
